@@ -1,0 +1,1 @@
+To build, put this directory in [https://github.com/pokemon-mini/c88-pokemini](https://github.com/pokemon-mini/c88-pokemini) under `examples/`, then run `make`. (Make sure `c88-pokemini` is built first.)

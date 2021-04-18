@@ -1,0 +1,179 @@
+P r o c e s s   t a b l e
+=========================
+
+Pid #		Load_mod
+0000		minipokemon.out
+
+
+M a p   p e r   c l u s t e r
+=============================
+
+Cluster: rom
+Chips:	 bios, prc_ram, ram, io_regs, cart
+
+Pid #	Section		Physical    Virtual     Size        Amode       Chip
+0000    .min_header    	0x000000    0x002100    0x0000ac    (absolute)  cart        
+0000    <reserved>     	0x000000    0x002100    0x0000d0    (absolute)  cart        
+0000    <reserved>     	0x000000    0x000000    0x000100    (absolute)  bios        
+0000    .frdata8620    	0x0000ac    0x0021ac    0x000004    (absolute)  cart        
+0000    .frdata8624    	0x0000b0    0x0021b0    0x00000c    (absolute)  cart        
+0000    .min_header_tail
+                        0x0000bc    0x0021bc    0x000014    (absolute)  cart        
+0000    .rtcode        	0x0000d0    0x0021d0    0x000094    code_short  cart        
+0000    xvwbuffer      	0x000100    0x000100    0x0013e0    data        bios        
+0000    .startup       	0x000164    0x002264    0x0000aa    code_short  cart        
+0000    .comm          	0x00020e    0x00230e    0x0003ff    code_short  cart        
+0000    .nrdata        	0x00060d    0x00270d    0x000101    data_short  cart        
+0000    .text__exit    	0x00070e    0x00280e    0x000003    code        cart        
+0000    .text_main     	0x000711    0x002811    0x000484    code        cart        
+0000    .text_check_flag
+                        0x000b95    0x002c95    0x0007bc    code        cart        
+0000    .frdata        	0x001351    0x003451    0x00324e    data        cart        
+0000    [.ndata]       	0x00459f    0x00669f    0x0000b2    code        cart        
+0000    table          	0x004652    0x006752    0x000017    code        cart        
+0000    .frdata65536   	0x00df00    0x010000    0x000600    (absolute)  cart        
+0000    .frdata131072  	0x01df00    0x020000    0x002280    (absolute)  cart        
+
+
+Cluster: ram
+Chips:	 bios, prc_ram, ram, io_regs, cart
+
+Pid #	Section		Physical    Virtual     Size        Amode       Chip
+0000    .nbss          	0x000000    0x0014e0    0x000004    data_short  ram         
+0000    .ndata         	0x000004    0x0014e4    0x0000b2    data_short  ram         
+0000    stack          	0x0000b6    0x001596    0x000b6a    data        ram         
+
+
+M A P   p e r   L O A D _ M O D
+===============================
+
+
+Load module minipokemon.out:
+Section        	Virtual     Size        Physical    
+xvwbuffer      	0x000100    0x0013e0    0x000100    
+.nbss          	0x0014e0    0x000004    0x000000    
+.ndata         	0x0014e4    0x0000b2    0x000004    
+stack          	0x001596    0x000b6a    0x0000b6    
+.min_header    	0x002100    0x0000ac    0x000000    
+.frdata8620    	0x0021ac    0x000004    0x0000ac    
+.frdata8624    	0x0021b0    0x00000c    0x0000b0    
+.min_header_tail
+                0x0021bc    0x000014    0x0000bc    
+.rtcode        	0x0021d0    0x000094    0x0000d0    
+.startup       	0x002264    0x0000aa    0x000164    
+.comm          	0x00230e    0x0003ff    0x00020e    
+.nrdata        	0x00270d    0x000101    0x00060d    
+.text__exit    	0x00280e    0x000003    0x00070e    
+.text_main     	0x002811    0x000484    0x000711    
+.text_check_flag
+                0x002c95    0x0007bc    0x000b95    
+.frdata        	0x003451    0x00324e    0x001351    
+table          	0x006752    0x000017    0x004652    
+.frdata65536   	0x010000    0x000600    0x00df00    
+.frdata131072  	0x020000    0x002280    0x01df00    
+ 
+Symbols:  Space SMC88_space
+                   Sorted on symbol                      Sorted on address
+                   ----------------                      -----------------
+                 __DIVUI - 0x0021d0           __lc_ub_xvwbuffer - 0x000100
+                 __MULXI - 0x00223b                     _preset - 0x0014e0
+                 __START - 0x002264           __lc_ue_xvwbuffer - 0x0014e0
+             __copytable - 0x002297                       _note - 0x0014e2
+                  __exit - 0x00280e                 _music_tick - 0x0014e4
+                 __lc_cp - 0x006752            _vibrato_counter - 0x0014e6
+                 __lc_es - 0x002100                 _is_vibrato - 0x0014e7
+       __lc_ub_xvwbuffer - 0x000100           _sin_table_offset - 0x0014e8
+       __lc_ue_xvwbuffer - 0x0014e0                     _cursor - 0x0014e9
+             __start_cpt - 0x002264                      _state - 0x0014ea
+            _black_pearl - 0x006675                       _flag - 0x0014ec
+                  _board - 0x001532                       _loop - 0x001504
+          _cartridge_irq - 0x00270a                      _board - 0x001532
+             _check_flag - 0x002c95                     __lc_es - 0x002100
+                 _cursor - 0x0014e9                  _game_code - 0x0021ac
+                   _flag - 0x0014ec                 _game_title - 0x0021b0
+              _flag_data - 0x00665d                     __DIVUI - 0x0021d0
+              _game_code - 0x0021ac                     __MULXI - 0x00223b
+             _game_title - 0x0021b0                 __start_cpt - 0x002264
+              _ir_rx_irq - 0x002523                     __START - 0x002264
+             _is_vibrato - 0x0014e7                 __copytable - 0x002297
+              _key_a_irq - 0x0026bc         _prc_frame_copy_irq - 0x00230e
+              _key_b_irq - 0x0026b9             _prc_render_irq - 0x002381
+              _key_c_irq - 0x0026b6     _timer_2h_underflow_irq - 0x002384
+           _key_down_irq - 0x00264b     _timer_2l_underflow_irq - 0x002387
+           _key_left_irq - 0x0025c8     _timer_1h_underflow_irq - 0x00238a
+          _key_power_irq - 0x002529     _timer_1l_underflow_irq - 0x00238d
+          _key_right_irq - 0x002543     _timer_3h_underflow_irq - 0x0024d0
+             _key_up_irq - 0x002680            _timer_3_cmp_irq - 0x002514
+                   _loop - 0x001504             _timer_32hz_irq - 0x002517
+                   _main - 0x002811              _timer_8hz_irq - 0x00251a
+             _music_tick - 0x0014e4              _timer_2hz_irq - 0x00251d
+                   _note - 0x0014e2              _timer_1hz_irq - 0x002520
+     _prc_frame_copy_irq - 0x00230e                  _ir_rx_irq - 0x002523
+         _prc_render_irq - 0x002381                  _shake_irq - 0x002526
+                 _preset - 0x0014e0              _key_power_irq - 0x002529
+                _presets - 0x003451              _key_right_irq - 0x002543
+              _shake_irq - 0x002526               _key_left_irq - 0x0025c8
+              _sin_table - 0x00270d               _key_down_irq - 0x00264b
+       _sin_table_offset - 0x0014e8                 _key_up_irq - 0x002680
+                   _song - 0x003651                  _key_c_irq - 0x0026b6
+                _sprites - 0x020000                  _key_b_irq - 0x0026b9
+                  _state - 0x0014ea                  _key_a_irq - 0x0026bc
+             _tile_count - 0x00280d                _unknown_irq - 0x002707
+                  _tiles - 0x010000              _cartridge_irq - 0x00270a
+ _timer_1h_underflow_irq - 0x00238a                  _sin_table - 0x00270d
+          _timer_1hz_irq - 0x002520                 _tile_count - 0x00280d
+ _timer_1l_underflow_irq - 0x00238d                      __exit - 0x00280e
+ _timer_2h_underflow_irq - 0x002384                       _main - 0x002811
+          _timer_2hz_irq - 0x00251d                 _check_flag - 0x002c95
+ _timer_2l_underflow_irq - 0x002387                    _presets - 0x003451
+         _timer_32hz_irq - 0x002517              _vibrato_table - 0x003551
+        _timer_3_cmp_irq - 0x002514                       _song - 0x003651
+ _timer_3h_underflow_irq - 0x0024d0                  _try_again - 0x006651
+          _timer_8hz_irq - 0x00251a                  _flag_data - 0x00665d
+              _try_again - 0x006651                _black_pearl - 0x006675
+            _unknown_irq - 0x002707                _white_pearl - 0x006683
+        _vibrato_counter - 0x0014e6                     __lc_cp - 0x006752
+          _vibrato_table - 0x003551                      _tiles - 0x010000
+            _white_pearl - 0x006683                    _sprites - 0x020000
+
+
+Sections:
+
+ISR:
+          Section   Virtual     Size        
+            .comm - 0x00230e    0x0003ff
+          .frdata - 0x003451    0x003200
+      .frdata8620 - 0x0021ac    0x000004
+      .frdata8624 - 0x0021b0    0x00000c
+            .nbss - 0x0014e0    0x000004
+           .ndata - 0x0014e4    0x000006
+          .nrdata - 0x00270d    0x000100
+      .text__exit - 0x00280e    0x000003
+
+MAIN:
+          Section   Virtual     Size        
+          .frdata - 0x006651    0x00004e
+    .frdata131072 - 0x020000    0x002280
+     .frdata65536 - 0x010000    0x000600
+           .ndata - 0x0014ea    0x0000ac
+          .nrdata - 0x00280d    0x000001
+ .text_check_flag - 0x002c95    0x0007bc
+       .text_main - 0x002811    0x000484
+
+startup:
+          Section   Virtual     Size        
+      .min_header - 0x002100    0x0000ac
+ .min_header_tail - 0x0021bc    0x000014
+         .startup - 0x002264    0x000033
+
+_copytbl:
+          Section   Virtual     Size        
+         .startup - 0x002297    0x000077
+
+_DIVUI:
+          Section   Virtual     Size        
+          .rtcode - 0x0021d0    0x00006b
+
+_MULXI:
+          Section   Virtual     Size        
+          .rtcode - 0x00223b    0x000029
